@@ -5,13 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ."
+    "start": "node .",
+    "clean": "rm src/*.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node-fetch": "^2.6.1",
-    "node-fetch": "^3.2.2",
+    "node-fetch": "^2.6.7",
     "openapi-typescript-fetch": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
   }
 }

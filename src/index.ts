@@ -1,14 +1,12 @@
-import { paths } from "./jira";
-import { Fetcher } from "openapi-typescript-fetch";
-import './polyfills'
+import './fetch-polyfill'
+import {paths} from "./jira";
+import {Fetcher} from "openapi-typescript-fetch";
 
 const fetcher = Fetcher.for<paths>()
 fetcher.configure({
     baseUrl: "https://bswtechconsulting.atlassian.net",
     init: {
-        headers: {
-
-        }
+        headers: {}
     }
 })
 
