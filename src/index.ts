@@ -1,4 +1,4 @@
-import './fetch-polyfill'
+import './fetch-polyfill.js'
 import {paths} from "./jira"
 import {Fetcher} from "openapi-typescript-fetch"
 
@@ -14,6 +14,5 @@ const getIssueById = fetcher.path("/rest/api/3/issue/{issueIdOrKey}")
     .method("get")
     .create()
 
-getIssueById({issueIdOrKey: "CAK-76"}).then(stuff => {
-    console.log(stuff.data.fields["summary"])
-})
+let result = await getIssueById({issueIdOrKey: "CAK-76"})
+console.log(result.data.fields.summary)

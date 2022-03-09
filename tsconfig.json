@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "Node",
+    "target": "ES2021",
     "baseUrl": ".",
     "paths": {
       "*": [
