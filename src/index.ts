@@ -1,6 +1,6 @@
 import './fetch-polyfill'
-import {paths} from "./jira";
-import {Fetcher} from "openapi-typescript-fetch";
+import {paths} from "./jira"
+import {Fetcher} from "openapi-typescript-fetch"
 
 const fetcher = Fetcher.for<paths>()
 fetcher.configure({
@@ -10,8 +10,10 @@ fetcher.configure({
     }
 })
 
-const getIssueById = fetcher.path("/rest/api/3/issue/{issueIdOrKey}").method("get").create()
+const getIssueById = fetcher.path("/rest/api/3/issue/{issueIdOrKey}")
+    .method("get")
+    .create()
 
 getIssueById({issueIdOrKey: "CAK-76"}).then(stuff => {
-    console.log(stuff.data.fields["summary"]);
+    console.log(stuff.data.fields["summary"])
 })
